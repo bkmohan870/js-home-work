@@ -1,7 +1,7 @@
 var records = new Array();
- /*var object1={}
- var objet2={}
- var object3={}*/
+ var object={};
+//  var object2={};
+//  var object3={};
 alert('welcome 2 fruite market');
 while (true) 
 {
@@ -29,13 +29,17 @@ while (true)
                     console.log('total apples cost is : '+applecost);
 
 
-                    records.push(options);
-                    records.push(applecount);
-                    records.push(applecost);
+                    // records.push(options);
+                    // records.push(applecount);
+                    // records.push(applecost);
+                    object = {}
+                    // object.options=options;
+                    object.name= 'apple'
+                    object.count=applecount;
+                    object.cost=applecost;
 
-                    // object1.push(options);
-                    // object1.push(applecount);
-                    // object1.push(applecost);
+                    records.push(object);
+
                 }               
                 if(!retval)break;
             break;
@@ -54,13 +58,17 @@ while (true)
                     console.log(mangocount+'mangoes you purchased');
                     console.log('total mangos cost is : '+mangocost);
 
-                    records.push(options);
-                    records.push(mangocount);
-                    records.push(mangocost);
+                    // records.push(options);
+                    // records.push(mangocount);
+                    // records.push(mangocost);
+                    object = {}
+                    // object.options=options;
+                    object.name='mango'
+                    object.count=mangocount;
+                    object.cost=mangocost;
 
-                    // object2.push(options);
-                    // object2.push(mangocount);
-                    // object2.push(mangocost);
+                    records.push(object);
+
                 }
                 if(!retval)break;
             break;
@@ -79,14 +87,18 @@ while (true)
                     console.log(goacount+'goas you purchased');
                     console.log('total goas cost is : '+goacost);
 
-                    records.push(options);
-                    records.push(goacount);
-                    records.push(goacost);
+                    // records.push(options);
+                    // records.push(goacount);
+                    // records.push(goacost);
 
+                    object = {}
+                    // object.options=options;
+                    object.name = 'goa';
+                    object.count=goacount;
+                    object.cost=goacost;
 
-                    // object3.push(options);
-                    // object3.push(goacount);
-                    // object3.push(goacost);
+                    records.push(object);
+
                 }
                 if(!retval)break;
             break;
@@ -107,9 +119,30 @@ while (true)
     }
 
 }
-// records.push(object1);
-// records.push(objet2);
-// records.push(object3);
-alert('total you purchased fruites are : '+records);
-console.log('total you purchased fruites are : '+records);
+
+// for (let index = 0; index < Object.keys(object1).length; index++)
+// {
+//     console.log(Object.keys(object1)[index]); 
+//     console.log(object1[Object.keys(object1)[index]]);
+
+//     alert('total purchased fruites are : '+Object.keys(object1)[index]) ;
+        
+// }
+
+// for (let index = 0; index < Object.keys(object2).length; index++)
+// {
+//     console.log(Object.keys(object2)[index]);  
+//     console.log(object2[Object.keys(object2)[index]]);
+
+//     alert('total fruites are : '+Object.keys(object2)[index])  ;
+        
+// }
+
+for(i=0;i<records.length;i++){
+    console.log(`${records[i].name} :-- ${records[i].count},  ${records[i].cost}`);
+    
+}
+
+// alert('total you purchased fruites are : '+records[0].applecost);
+// console.log('total you purchased fruites are : '+records);
 
